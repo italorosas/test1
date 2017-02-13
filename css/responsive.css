@@ -1,0 +1,97 @@
+@media (max-width: 1024px){
+	.wrapper{
+		width: 100%;
+	}
+	.menu{
+		width: 100%;
+	}
+	.menu ul{
+		margin-left: 2%!important;
+	}
+	.boxing-text article{
+		margin: 0px 15px;
+	}
+}
+@media (max-width: 970px){
+
+	.menu{
+		width: 100%;
+	}
+	.menu ul{
+		width: 100%;
+		margin: 0px!important;
+		border: 0px;
+	}
+	.menu li{
+		width: 100%;
+	}
+	.menu ul li:hover{
+		background-color: #e7e9ed;
+		width: 95%;
+	}
+	#search{
+		padding: 15px;
+
+	}
+	.menu .active-responsive{
+	    display: inline-block;
+		text-align: left;
+	    margin: 5px;
+	    width: 0px;
+	}
+	.over-opciones{
+		display: none;
+		text-align: left;
+		background-color: darkgrey;
+	}
+	.over-opciones li{
+		border: 0px;
+		padding:10px 0px;
+	}
+	.over-opciones li:hover{
+		background-color: grey;
+		padding:10px;
+		transition: all 200ms ease;
+	}
+	.over-opciones span:hover{
+		background-color: grey;
+		padding:10px;
+		transition: all 200ms ease;
+	}
+	.over-opciones span{
+		margin: 0px 15px;
+		border: 0px;
+		padding:10px;
+	}
+	.boxing-text article{
+		width: 30%;
+		margin: 0px 9px;
+	}
+
+}
+
+@media (max-width: 800px){
+	.boxing-text article{
+		margin: 0px 4px;
+		height: auto;
+		margin-bottom: 20px;
+	}
+	.formulario{
+		margin-top: 30px;
+   		margin-left: 45px;
+   		margin-bottom: 20px;
+	}
+}
+@media (max-width: 720px){
+	#search input[type="text"]:focus {
+		width:170px;
+	}
+}
+
+@media (max-width: 520px){
+	.boxing-text article{
+		width: 80%;
+		margin: 5px 0px;
+	}
+
+}

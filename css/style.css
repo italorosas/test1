@@ -1,0 +1,182 @@
+.wrapper{
+	width: 1024px;
+	margin: 0 auto;
+}
+.menu{
+	width: 1024px;
+}
+.menu ul{
+	border: 1px solid black;
+	text-align: center;
+	margin-left: 5%;
+	display: inline-block;
+}
+.menu li{
+	display: inline-block;
+	padding: 7px 45px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: black;
+}
+.menu a{
+	text-decoration: none;
+}
+.menu ul li:hover{
+	background-color: #e7e9ed;
+
+}
+.menu .active-responsive{
+    display: none;
+}
+
+#search {
+	display: inline-block;
+	float: right;
+}
+
+#search input[type="text"] {
+	background: url(../img/search-white.png) no-repeat 10px 6px #fcfcfc;
+    border: 2px solid black;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: black;
+    width: 150px;
+    padding: 6px 15px 6px 35px;
+    border-radius: 20px;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search input[type="text"]:focus {
+    width: 170px;
+}
+
+.boxing-text{
+	display: inline-block;
+	margin: 0px;
+	text-align: center;
+	width: 100%;
+}
+.boxing-text article{
+	width: 280px;
+	height: 300px;
+	display: inline-block;
+	margin:0px 20px;
+	border: 2px solid black;
+}
+.boxing-text article p{
+	font-family: Verdana,sans-serif;
+	text-align: left;
+	font-size: 12px;
+	letter-spacing: 1px;
+	margin: 5px;
+	color: black;
+}
+.formulario{
+	margin-top: 30px;
+	margin-left: 45px;
+	width: 70%;
+	display: inline-block;
+}
+
+.formulario h2{
+    font-family: Helvetica, Arial, sans-serif;
+ }
+
+#form-div {
+	padding-left:35px;
+	padding-right:35px;
+	padding-bottom:50px;
+	float: left;
+	left: 55%;
+	position: absolute;
+	margin-left: -260px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+.feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  	border: 3px solid rgba(0,0,0,0);
+}
+
+#name{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	border: 2px solid black;
+}
+
+#email{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	border: 2px solid black;
+}
+
+#comment{
+	background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	border: 2px solid black;
+	height: 180px;
+}
+#password{
+	background-image: url(../img/key.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	border: 2px solid black;
+}
+
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 100%;
+	border: black solid 1px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  	font-weight:700;
+  	text-align: center;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+	
+.submit:hover {
+	color: #3498db;
+}
+
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}

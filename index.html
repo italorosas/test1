@@ -1,0 +1,137 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Prueba web</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" href="flexslider.css" type="text/css">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="jquery.flexslider.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" href="js/script.js"></script>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<nav class="menu">
+			<a href="#"><li class="active-responsive"><img src="img/menu.png"></li></a>
+			<form method="get" action="/search" id="search">
+			 	<input name="q" type="text" size="40" placeholder="Search..." />
+			</form>
+			<ul class="over-opciones">
+				<a href=""><li>Apps</li></a>
+				<a href=""><li>Games</li></a>
+				<a href=""><li>Movies</li></a>
+				<a href=""><li>Books</li></a>
+				<a href=""><li>New Spapers</li></a>
+			</ul>
+
+		</nav>
+		<div class="flexslider">
+		  <ul class="slides">
+		    <!--<li>
+		      <img src="http://placehold.it/1024x350" />
+		    </li>
+		    <li>
+		      <img src="http://placehold.it/1024x350" />
+		    </li>
+		    <li>
+		      <img src="http://placehold.it/1024x350" />
+		    </li>
+		    <li>
+		      <img src="http://placehold.it/1024x350" />
+		    </li>-->
+		  </ul>
+		</div>
+
+
+			<div class="boxing-text">
+				<section>
+					<article><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, nibh id vehicula hendrerit, felis nibh consectetur lorem, non elementum sapien ligula vel mi. Curabitur aliquet condimentum libero, quis consectetur massa volutpat at. Aenean vel ante justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean vel feugiat lorem. Donec varius cursus dui. In placerat tortor vitae lorem sodales cursus. Vivamus vel pretium libero. Fusce id ornare augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mollis ultrices massa sollicitudin bibendum. </p></article>
+					<article><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, nibh id vehicula hendrerit, felis nibh consectetur lorem, non elementum sapien ligula vel mi. Curabitur aliquet condimentum libero, quis consectetur massa volutpat at. Aenean vel ante justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean vel feugiat lorem. Donec varius cursus dui. In placerat tortor vitae lorem sodales cursus. Vivamus vel pretium libero. Fusce id ornare augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mollis ultrices massa sollicitudin bibendum. </p></article>
+					<article><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum, nibh id vehicula hendrerit, felis nibh consectetur lorem, non elementum sapien ligula vel mi. Curabitur aliquet condimentum libero, quis consectetur massa volutpat at. Aenean vel ante justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean vel feugiat lorem. Donec varius cursus dui. In placerat tortor vitae lorem sodales cursus. Vivamus vel pretium libero. Fusce id ornare augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mollis ultrices massa sollicitudin bibendum. </p></article>
+				</section>
+
+			</div>
+
+					<div class="formulario">
+						<h2>Formulario</h2>
+								<div id="form-main">
+									<div id="form-div">
+										<form class="form" id="form1" method="get" action=" http://test.masuno.pe/form.php" onsubmit="return validarFormulario()">
+																		     
+											<p class="name">
+													<input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" required/>
+											</p>
+																		      
+											<p class="email">
+													<input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" required/>
+											</p>
+																		      
+											<p class="email">
+													<input name="email" type="password" class="validate[required,custom[email]] feedback-input" id="password" placeholder="Password" required/>
+											</p>
+
+											<p class="text">
+													<textarea name="text" class="validate[required,length[6,300]] feedback-input" required id="comment" placeholder="Comment"></textarea>
+											</p>
+																		      
+																		      
+															
+											<div class="submit">
+													<input type="submit" value="Enviar" id="button-blue"/>
+													<div class="ease"></div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+					</div>
+
+	</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+function validarFormulario(){
+	if($.trim($("#password").val().length)>3){
+
+				}else{
+
+					alert("password minimo 3 caracteres");
+					return false;
+				}
+
+	
+}
+			$.getJSON("http://test.masuno.pe/images.php",function(data){
+				console.log("datos");
+				for (var i = 0; i< data.length; i++) {
+			
+					$(".slides").append("<li>"
+		      +"<img src='"+data[i]+"' />"
+		    +"</li>")
+				}
+				 $('.flexslider').flexslider({
+	    animation: "slide"
+	  });
+			})
+
+	
+
+		$(function(){
+		
+		 	$(".active-responsive").click(menu)
+		 		function menu()
+		 		{
+		 	$(".over-opciones").slideToggle();
+		 
+		 	}
+		 	event.preventDefault();
+ 		})
+
+	</script>
